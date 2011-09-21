@@ -13,8 +13,6 @@ for i in range(totalimages):
   imgurl=str(listoftags[i])
   print imgurl
   imgurllist=list(imgurl)
-  #print imgurl
-  #print imgurllist
   lenofurl=len(imgurllist[i])
   for j in range(100000):
     #if imgurllist[j]==':' and imgurllist[j-1]=='s':
@@ -31,7 +29,6 @@ for i in range(totalimages):
   if finalurllist[0]!='h':
     finalurl=homeurl+"/"+finalurl
   print finalurl
-  #print lpos,hpos
   f=open("/home/aaditya/blogdl/img%d"%i+".jpg",'wb')
   f.write(urllib.urlopen(finalurl).read())
   f.close()
